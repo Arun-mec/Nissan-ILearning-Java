@@ -6,6 +6,7 @@ import com.nissan.bean.CustomerClass;
 public class ClientClass {
 	public static void main(String[] args) throws BalanceException {
 		
+		// Declaring the objects of the classes
 		CustomerClass customer = new CustomerClass();
 		Scanner scanner = new Scanner(System.in);
 		char choice = 'n';
@@ -19,8 +20,8 @@ public class ClientClass {
 			// declaring and initialising the variables
 			double balance = 5000.0f;
 			
+			// To check the option from the users
 			switch(option) {
-			
 			case 1: System.out.println("Enter the amount to withdraw..");
 					double withdrawAmt = scanner.nextDouble();
 					balance = customer.withdraw(balance, withdrawAmt);
@@ -29,6 +30,7 @@ public class ClientClass {
 					break;
 			}
 			
+			// check for the choice from the users 
 			System.out.println("Do you want to continue? y or n");
 			choice = scanner.next().charAt(0);
 			
