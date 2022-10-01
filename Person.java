@@ -1,57 +1,29 @@
-package com.nissan.bean;
+package com.nissan.app;
 
 import java.util.Scanner;
 
+import com.nissan.bean.PersonClass;
+
 public class Person {
-	
-	// Instance variables
-	private String name;
-	private int age;
-	
-	// Default function
-	public Person() {
-		super();
-	}
+	public static void main(String[] args) {
 
-	// Paramterized function
-	public Person(String name, int age) {
-		super();
-		this.name = name;
-		this.age = age;
-	}
-	
-	public void readData() {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter name : ");
-		this.name = input.nextLine();
-		
-		System.out.println("Enter age : ");
-		this.age = Integer.parseInt(input.nextLine());
-	
-	}
-	public void displayData() {
-		System.out.println("Name: "+this.name);
-		System.out.println("Age: "+this.age);
-	}
+		try {
 
-	public String getName() {
-		return name;
-	}
+			// prompt input fromt he user
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Enter the name of the person");
+			String name = scanner.nextLine();
+			System.out.println("Enter the age of the person");
+			int age = scanner.nextInt();
+			System.out.println("Enter the salary of the person");
+			double salary = scanner.nextDouble();
 
-	public void setName(String name) {
-		this.name = name;
+			//declaration od the class
+			PersonClass personOne = new PersonClass(name, age, salary);
+			personOne.displayPersonDetails(); // Displaying the output
+			
+		} catch (Exception ex) {
+			System.err.println("Enter valid input!!");
+		}
 	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-	
-	
-	
-	
-	
 }

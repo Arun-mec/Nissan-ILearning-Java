@@ -1,21 +1,15 @@
-package com.nissan.bean;
+package com.nissan.app;
+
+import com.nissan.bean.BoxClass;
 
 public class VolumeClass {
-	private double _width;
-	private double _height;
-	private double _depth;
 	
-	public VolumeClass() {}
-	
-	public VolumeClass(double width, double height, double depth) {
-		this._width = width;
-		this._height = height;
-		this._depth = depth;
+	public static void main(String[] args) {
+		
+		BoxClass box1 = new BoxClass(10,20,10);
+		BoxClass box2 = new BoxClass(10,20,10);
+		System.out.println("The volume of box one is : "+box1.Volume());
+		System.out.println("The volume is box two is : "+box2.Volume());
+		
 	}
-	
-	public void getVolume() {
-		System.out.println("The volume of the box is :"+(this._width*this._height*this._depth)+" m3");
-	}
-	
-	
 }
