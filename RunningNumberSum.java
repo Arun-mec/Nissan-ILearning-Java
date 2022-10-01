@@ -20,8 +20,8 @@ public class RunningNumberSum {
 			//increment number
 			++number; // pre-increment
 			
-			//print the result
 		}
+		//print the result
 		System.out.println("The sum from "+lowerBound+" to "+upperBound+" is "+sum);
 
 		

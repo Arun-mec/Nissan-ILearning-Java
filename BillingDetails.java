@@ -7,13 +7,13 @@ public class BillingDetails {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		// Declaring the variables
 		char choice = 'n';
 		int entry = 0;
-
+		
 		Scanner input = new Scanner(System.in);
 
-		// Menu driven
-
+		// Menu driven program
 		do {
 
 			// getting user details
@@ -23,21 +23,25 @@ public class BillingDetails {
 			System.out.println("Enter the customer ID:");
 			int customerId = input.nextInt();
 			System.out.println("Enter the billing date:");
-			String date = input.next();
+			String billingDate = input.next();
 			System.out.println("Enter the amount outstanding:");
-			double amount = input.nextDouble();
+			double outStandingAmt = input.nextDouble();
 			
 			// Display details based on user input
-			displayBillingDetails(countryName, countryLanguage, customerId, date, amount);
+			displayBillingDetails(countryName, countryLanguage, customerId, billingDate, outStandingAmt);
 			entry++;
 			
-			// Driving menu
+			// Menu driven program
 			System.out.println("Do you want to add another data? y or n");
 			choice = input.next().charAt(0);
 
+			input.close();
+			
+			// Taking the choice from the customer
 			if (choice == 'n' || entry == 5) {
 				getExitNote(choice, entry);
 			}
+			
 
 		} while (entry<5 && choice=='y');
 
@@ -45,6 +49,7 @@ public class BillingDetails {
 
 	private static void displayBillingDetails(String countryName, String countryLanguage, int customerId, String date,
 			double amount) {
+		
 		// TODO Auto-generated method stub
 		System.out.println("Country Name" + "\t" + "Language" + "\t" + "CustomerId" + "\t" + "Billing Date" + "\t"
 				+ "Amount Outstanding");
@@ -54,6 +59,7 @@ public class BillingDetails {
 	private static void getExitNote(char choice, int entry) {
 		// TODO Auto-generated method stub
 
+		// Checking the limit
 		if (entry == 5) {
 			System.out.println("Maximum limit has been reached!");
 		}
@@ -65,6 +71,7 @@ public class BillingDetails {
 
 		String language = "";
 
+		// Checking the input countries
 		switch (countryName.toUpperCase()) {
 		case "INDIA":
 			language = "Hindi";

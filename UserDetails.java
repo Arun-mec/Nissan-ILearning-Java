@@ -9,6 +9,8 @@ public class UserDetails {
 		// TODO Auto-generated method stub
 		
 		Scanner input = new Scanner(System.in);
+		
+		//Declaring the variables
 		System.out.println("Enter the name");
 		String name = input.next();
 		System.out.println("Enter the gender");
@@ -24,6 +26,8 @@ public class UserDetails {
 		
 		
 		input.close();
+		
+		// Printing the output
 //		PrintDetails(name,gender,dob,maritalStatus,weight,gpa,generateRandom());
 //		PrintDetailsNextline(name,gender,dob,maritalStatus,weight,gpa,generateRandom());
 		PrintDetailsTablewise(name,gender,dob,maritalStatus,weight,gpa,generateRandom());

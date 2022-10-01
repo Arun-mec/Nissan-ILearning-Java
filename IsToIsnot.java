@@ -19,6 +19,8 @@ public class IsToIsnot {
 		// Replacing words
 		String nwString= currentString.replace("is","is not");
 		System.out.println(nwString);
+		
+		input.close();
 	}
 
 }

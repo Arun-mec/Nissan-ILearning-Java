@@ -15,6 +15,7 @@ public class PoundToKg {
 		//store the values
 		double pounds = input.nextDouble();
 	
+		//conversion of kg to pounds
 		double kilograms = poundsToKilograms(pounds);
 		System.out.println("The"+pounds+"in kilograms %.2f"+kilograms);
 	}
@@ -22,6 +23,7 @@ public class PoundToKg {
 	private static double poundsToKilograms(double pounds) {
 		// TODO Auto-generated method stub
 		
+		//kg to pounds conversion
 		return pounds*0.456;
 	}
 }
